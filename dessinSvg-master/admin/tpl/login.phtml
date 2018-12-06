@@ -1,0 +1,18 @@
+<section>
+<?php if($error):?>
+<?= $error ?>
+<?php endif;?>
+<?php if($noCo):?>
+<?= $noCo ?>
+<?php endif;?>
+<form action="login.php" method="post">
+    <p>
+    <label for="email">Votre email:</label>
+        <input type="text" name="email" id="email" value="">
+    <label for="password">Votre mot de passe:</label>
+        <input type="text" name="password" id="password" value="">
+    </p>
+    <input type="submit" value="Se connecter">
+    <p> Pas de compte? <a href="addUser.php">S'inscrire</a>
+    </p>
+</section>

@@ -1,0 +1,36 @@
+<?php var_dump($error);?>
+<?php if(count($error)>0):?>
+<?php foreach ($error as $errorShown):?>
+<p><?= $errorShown ?></p>
+<?php endforeach;?>
+<?php endif;?>
+
+<section>
+
+
+    <form action="addUser.php" method="post">
+    <label for="name">Votre nom:</label>
+        <input type="text" name="name" id="name" value="<?= $tabNewUser['aut_nom']?>">
+
+        <label for="prenom">Votre Prénom:</label>
+            <input type="text" name="prenom" id="prenom" value="<?= $tabNewUser['aut_prenom']?>">
+
+        <label for="pseudo">Votre Pseudo:</label>
+            <input type="text" name="pseudo" id="pseudo" value="<?= $tabNewUser['aut_username']?>">
+
+        <label for="email">Votre email:</label>
+            <input type="text" name="email" id="email" value="<?= $tabNewUser['aut_email']?>">
+
+        <label for="bio">Votre biographie:</label>
+            <input type="text" name="bio" id="bio" value="<?= $tabNewUser['aut_biographie']?>">
+
+        <label for="password">Votre mot de passe:</label>
+            <input type="text" name="password" id="password" value="">
+
+        <label for="conf_password">Confirmez votre mot de passe:</label>
+            <input type="text" name="conf_password" id="conf_password" value="">
+
+        <input type="submit" value="S'inscrire"> 
+    </form>
+
+</section>
