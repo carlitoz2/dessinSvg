@@ -4,15 +4,45 @@ abstract class Forme2D{
 
     // PROPRIETES
 
+    /**
+     * @var integer epaisseur de la bordure
+     */
     protected $strokeWidth; // Epaisseur bordure
+
+    /**
+     * @var string couleur de remplissage
+     */
     protected $fill; // couleur de remplissage
+
+
+    /**
+     * @var integer opacité de la forme
+     **/
     protected $opacity; // opacité
+
+    /**
+     * @var integer opacité du trait
+     */
     protected $opacityStroke; // opacité du trait
+
+    /**
+     * @var string couleur du trait
+     */
     protected $strokeColor; // couleur du trait
-    //protected $anchorPoint; 
 
-    // METHODES
+        /**
+     * @var integer,integer  point d'ancrage
+     */
+    protected $anchorPoint; 
 
+
+
+  
+    /** Contruction de l'objet form 2D
+     * 
+     * @param void
+     * @return void
+     */
     public function __construct(){
         $this->strokeWidth = 1;
         $this->fill = 'blue';
@@ -28,116 +58,6 @@ abstract class Forme2D{
     /**************************
      * GETTERS AND SETTERS*
     ***************************/
-
-
-    /****************************
-     * Get the value of strokeWidth
-     */ 
-    public function getStrokeWidth()
-    {
-        return $this->strokeWidth;
-    }
-
-    /**
-     * Set the value of strokeWidth
-     *
-     * @return  self
-     */ 
-    public function setStrokeWidth($strokeWidth)
-    {
-        $this->strokeWidth = $strokeWidth;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of fill
-     */ 
-    public function getFill()
-    {
-        return $this->fill;
-    }
-
-    /**
-     * Set the value of fill
-     *
-     * @return  self
-     */ 
-    public function setFill($fill)
-    {
-        $this->fill = $fill;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of opacity
-     */ 
-    public function getOpacity()
-    {
-        return $this->opacity;
-    }
-
-    /**
-     * Set the value of opacity
-     *
-     * @return  self
-     */ 
-    public function setOpacity($opacity)
-    {
-        $this->opacity = $opacity;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of opacityStroke
-     */ 
-    public function getOpacityStroke()
-    {
-        return $this->opacityStroke;
-    }
-
-    /**
-     * Set the value of opacityStroke
-     *
-     * @return  self
-     */ 
-    public function setOpacityStroke($opacityStroke)
-    {
-        $this->opacityStroke = $opacityStroke;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of strokeColor
-     */ 
-    public function getStrokeColor()
-    {
-        return $this->strokeColor;
-    }
-
-    /**
-     * Set the value of strokeColor
-     *
-     * @return  self
-     */ 
-    public function setStrokeColor($strokeColor)
-    {
-        $this->strokeColor = $strokeColor;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of anchorPoint
-     */ 
-    public function getAnchorPoint()
-    {
-        return $this->anchorPoint;
-    }
-
     /**
      * Set the value of anchorPoint
      *
@@ -149,4 +69,112 @@ abstract class Forme2D{
 
         return $this;
     }
+
+        /**
+     * Get point d'ancrage
+     *
+     * @return  integer,integer
+     */ 
+    public function getAnchorPoint()
+    {
+        return $this->anchorPoint;
+    }
+    
+    /**
+     * Get epaisseur de la bordure
+     *
+     * @return  integer
+     */ 
+    public function getStrokeWidth()
+    {
+        return $this->strokeWidth;
+    }
+
+    /**
+     * Set epaisseur de la bordure
+     *
+     * @param  integer  $strokeWidth  epaisseur de la bordure
+     *
+     * @return  self
+     */ 
+    public function setStrokeWidth($strokeWidth)
+    {
+        $this->strokeWidth = $strokeWidth;
+
+        return $this;
+    }
+
+    /**
+     * Get couleur de remplissage
+     *
+     * @return  string
+     */ 
+    public function getFill()
+    {
+        return $this->fill;
+    }
+
+    /**
+     * Set couleur de remplissage
+     *
+     * @param  string  $fill  couleur de remplissage
+     *
+     * @return  self
+     */ 
+    public function setFill(string $fill)
+    {
+        $this->fill = $fill;
+
+        return $this;
+    }
+
+    /**
+     * Get opacité de la forme
+     *
+     * @return  integer
+     */ 
+    public function getOpacity()
+    {
+        return $this->opacity;
+    }
+
+    /**
+     * Set opacité de la forme
+     *
+     * @param  integer  $opacity  opacité de la forme
+     *
+     * @return  self
+     */ 
+    public function setOpacity($opacity)
+    {
+        $this->opacity = $opacity;
+
+        return $this;
+    }
+
+    /**
+     * Get couleur du trait
+     *
+     * @return  string
+     */ 
+    public function getStrokeColor()
+    {
+        return $this->strokeColor;
+    }
+
+    /**
+     * Set couleur du trait
+     *
+     * @param  string  $strokeColor  couleur du trait
+     *
+     * @return  self
+     */ 
+    public function setStrokeColor(string $strokeColor)
+    {
+        $this->strokeColor = $strokeColor;
+
+        return $this;
+    }
+
+
 }

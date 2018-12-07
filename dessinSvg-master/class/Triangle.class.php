@@ -1,25 +1,27 @@
 <?php
 
-
-<polygon points="50,160 55,180 70,180"
-
 class Triangle extends Forme2D {
-    
+    /**
+     * @var integer Position du deuxieme point
+     */
     protected $anchorPoint2;
+        /**
+     * @var integer Position du troisième point
+     */
     protected $anchorPoint3;
 
+    /** Contruction de l'objet rectangle
+     * 
+     * @param void 
+     * @return void
+     */
 
-    public function __construct($anchorPoint,$anchorPoint2,$anchorPoint3){
+    public function __construct(){
         parent::__construct();
-        $this->anchorPoint2 = $anchorPoint2;
-        $this->anchorPoint3 = $anchorPoint3;
+        $this->anchorPoint2 = new Point(30,30);
+        $this->anchorPoint3 = new Point(30,30);
 
-    }
-    
-    
-
-
-
+    }    
     /**
      * Get the value of anchorPoint2
      */ 
@@ -60,7 +62,14 @@ class Triangle extends Forme2D {
         return $this;
     }
 
+
+    
+    /** Dessin de l'objet triangle
+     * 
+     * @param void 
+     * @return string chaine SVG du triangle
+     */
     function draw(){
-        return' <polygon points="'.$this->anchorPoint->getPositionX().','.$this->anchorPoint->getPositionY().' '.$this->$anchorPoint2->getPositionX().','.$this->anchorPoint2>getPositionY().' '.$this->$anchorPoint3->getPositionX().','.$this->anchorPoint3>getPositionY().'" style="fill:'.$this->fill.';stroke-width:'.$this->strokeWidth.';stroke:'.$this->strokeColor.'" />';
+     return '<polygon points="'.$this->anchorPoint->getPositionX().','.$this->anchorPoint->getPositionY().' '.$this->anchorPoint2->getPositionX().','.$this->anchorPoint2->getPositionY().' '.$this->anchorPoint3->getPositionX().','.$this->anchorPoint3->getPositionY().'" style="fill:'.$this->fill.';stroke:'.$this->strokeColor.';stroke-width:'.$this->strokeWidth.'" />';
     }
 }

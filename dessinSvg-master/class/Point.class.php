@@ -1,10 +1,22 @@
 <?php 
 
 class Point {
-
+    /**
+     * @var integer position X du pointd'ancrage
+     */
     protected $positionX;
+    /**
+     * @var integer position Y du point d'ancrage
+     */
     protected $positionY;
 
+
+    /** Contruction de l'objet point d'ancrage
+     * 
+     * @param integer $positionX position X du point d'ancrage
+     * @param integer $positionX position Y du point d'ancrage
+     * @return void
+     */
     public function __construct($positionX,$positionY){
 
         $this->positionX = $positionX;
@@ -13,8 +25,12 @@ class Point {
     }
 
 
+   
+
     /**
-     * Get the value of positionX
+     * Get position X du pointd'ancrage
+     *
+     * @return  integer
      */ 
     public function getPositionX()
     {
@@ -22,7 +38,9 @@ class Point {
     }
 
     /**
-     * Set the value of positionX
+     * Set position X du pointd'ancrage
+     *
+     * @param  integer  $positionX  position X du pointd'ancrage
      *
      * @return  self
      */ 
@@ -34,7 +52,9 @@ class Point {
     }
 
     /**
-     * Get the value of positionY
+     * Get position Y du point d'ancrage
+     *
+     * @return  integer
      */ 
     public function getPositionY()
     {
@@ -42,7 +62,9 @@ class Point {
     }
 
     /**
-     * Set the value of positionY
+     * Set position Y du point d'ancrage
+     *
+     * @param  integer  $positionY  position Y du point d'ancrage
      *
      * @return  self
      */ 

@@ -26,25 +26,19 @@ $ce1->setAnchorPoint(50,120);
 $ce1->setfill('orange');
 
 $t1 = new Triangle ();
+$t1->setAnchorPoint2(120,120);
+$t1->setAnchorPoint3(160,140);
 
 
+//var_dump($t1);
 $tableau = new Paint();
-var_dump($tableau);
 /*foreach ( as $forme){
 
     array_push($tableau->$dessin, $forme);
 }*/
-$tableau->addShape($r1);
-$tableau->addShape($r2);
-$tableau->addShape($r3);
-$tableau->addShape($c1);
-$tableau->addShape($e1);
-$tableau->addShape($ce1);
+$tableau->addShape($r1)->addShape($r2)->addShape($r3)->addShape($c1)->addShape($e1)->addShape($ce1)->addShape($t1);
 
 //var_dump($tableau);
 $svg = $tableau->render();
 
 echo $svg;
-
-var_dump($r1);
-var_dump($r2);

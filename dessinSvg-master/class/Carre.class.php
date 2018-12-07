@@ -1,16 +1,21 @@
 <?php 
-class Carre extends Forme2D {
+class Carre extends Rectangle {
     
-    protected $cote;
-    public function __construct($cote){
-        parent::__construct();
-        $this->cote = $cote;
+    /** Contruction de l'objet carre
+     * 
+     * @param integer $cote coté du carre 
+     * @return void
+     */
+    //protected $cote;
+        /** Dessin de l'objet carré
+     * 
 
-    }
-    
-    
-    function draw(){
-        return' <rect x="'.$this->anchorPoint->getPositionX().'" y="'.$this->anchorPoint->getPositionY().'" width="'.$this->cote.'" height="'.$this->cote.'" style="fill:'.$this->fill.';stroke-width:'.$this->strokeWidth.';stroke:'.$this->strokeColor.'" />';
+     * @return string chaine SVG
+     */
+    public function __construct($cote){
+        parent::__construct($cote,$cote);
+        //$this->cote = $cote;
+
     }
 
 }

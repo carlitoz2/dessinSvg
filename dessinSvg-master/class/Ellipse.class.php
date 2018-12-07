@@ -9,7 +9,11 @@ class Ellipse extends Forme2D {
         $this->rayY = $rayY;
 
     }
-    
+        /** Dessin de l'objet ellipse
+     * 
+     * @param void 
+     * @return string chaine SVG de l'ellipse
+     */
     function draw(){
         return' <ellipse cx="'.$this->anchorPoint->getPositionX().'" cy="'.$this->anchorPoint->getPositionY().'" rx="'.$this->rayX.'" ry="'.$this->rayY.'" style="fill:'.$this->fill.';stroke-width:'.$this->strokeWidth.';stroke:'.$this->strokeColor.'" />';
     }
